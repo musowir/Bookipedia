@@ -32,15 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // use bookId to fetch related books data from your database or API
         // and populate the related-books-container with that data
         if(relatedBooksContainer.style.display != 'block'){
-        relatedBooksContainer.innerHTML = '<h2>Related Books for Book ' + bookId + '</h2><ul><li>Related Book 1</li><li>Related Book 2</li></ul>';
         relatedBooksContainer.style.display = 'block';
+        
         }
         else{
             relatedBooksContainer.style.display = 'none';
         }
       });
     });
-
+    
+    
 
 });
 
