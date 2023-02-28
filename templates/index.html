@@ -26,111 +26,17 @@
 <h2 class="genre-title">Science Fiction</h2>
     <div class="book-list-wrapper">
         <button class="scroll-btn scroll-left">←</button>
-      
-        <div class="book-card" data-book-id="1">
-          <img src="https://via.placeholder.com/200x300.png?text=Book+1" alt="Book 1">
-          <div class="book-details">
-            <h3>Book 1</h3>
-            <p>Author: John Doe</p>
-            <p>Price: $10.99</p>
-          </div>
-          <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
-        </div>
-        <div class="book-card" data-book-id="2">
-            <img src="https://via.placeholder.com/200x300.png?text=Book+1" alt="Book 1">
+        {% for rb in random_books %}
+        <div class="book-card" data-book-id="{{rb[0]}}">
+          <img src="https://via.placeholder.com/200x300.png?text={{rb[0]}}" alt="{{rb[0]}}">
             <div class="book-details">
-              <h3>Book 1</h3>
-              <p>Author: John Doe</p>
-              <p>Price: $10.99</p>
+              <h3 class="truncate">{{rb[0]}}</h3>
+              <p>{{rb[1]}}</p>
             </div>
-            <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
-          </div>
-          <div class="book-card" data-book-id="3">
-            <img src="https://via.placeholder.com/200x300.png?text=Book+1" alt="Book 1">
-            <div class="book-details">
-              <h3>Book 1</h3>
-              <p>Author: John Doe</p>
-              <p>Price: $10.99</p>
-            </div>
-            <button class="related-books-btn"></i> <i class="bi bi-box-seam-fill"></i></button>
-          </div>
-      
-        <div class="book-card" data-book-id="4">
-          <img src="https://via.placeholder.com/200x300.png?text=Book+2" alt="Book 2">
-          <div class="book-details">
-            <h3>Book 2</h3>
-            <p>Author: Jane Doe</p>
-            <p>Price: $9.99</p>
-          </div>
-         <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i> </button>
-        </div>
-      
-      
-        <div class="book-card" data-book-id="5">
-          <img src="https://via.placeholder.com/200x300.png?text=Book+3" alt="Book 3">
-          <div class="book-details">
-            <h3>Book 3</h3>
-            <p>Author: John Smith</p>
-            <p>Price: $11.99</p>
-          </div>
           <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
         </div>
-      
-      
-        <div class="book-card" data-book-id="6">
-          <img src="https://via.placeholder.com/200x300.png?text=Book+4" alt="Book 4">
-          <div class="book-details">
-            <h3>Book 4</h3>
-            <p>Author: Jane Smith</p>
-            <p>Price: $8.99</p>
-          </div>
-          <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
-        </div>
-      
-      
-        <div class="book-card" data-book-id="7">
-          <img src="https://via.placeholder.com/200x300.png?text=Book+5" alt="Book 5">
-          <div class="book-details">
-            <h3>Book 5</h3>
-            <p>Author: Tom Johnson</p>
-            <p>Price: $12.99</p>
-          </div>
-          <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
-        </div>
-      
-      
-        <div class="book-card" data-book-id="8">
-          <img src="https://via.placeholder.com/200x300.png?text=Book+6" alt="Book 6">
-          <div class="book-details">
-            <h3>Book 6</h3>
-            <p>Author: Mary Johnson</p>
-            <p>Price: $7.99</p>
-          </div>
-          <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
-        </div>
-      
-      
-        <div class="book-card" data-book-id="9">
-          <img src="https://via.placeholder.com/200x300.png?text=Book+6" alt="Book 6">
-          <div class="book-details">
-            <h3>Book 6</h3>
-            <p>Author: Mary Johnson</p>
-            <p>Price: $7.99</p>
-            
-          </div>
-          <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
-        </div>
-      
-      
-        <div class="book-card" data-book-id="10">
-          <img src="https://via.placeholder.com/200x300.png?text=Book+6" alt="Book 6">
-          <div class="book-details">
-            <h3>Book 6</h3>
-            <p>Author: Mary Johnson</p>
-            <p>Price: $7.99</p>
-          </div>
-          <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
-        </div>
+        {% endfor %}
+        
         <button class="scroll-btn scroll-right">→</button>
 </div>
 <div id="related-books-container" class="related-books-container" style="display: none;">

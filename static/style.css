@@ -168,7 +168,13 @@ h2 {
   .dark-theme .book-card:hover {
     box-shadow: 5px 5px 10px rgba(124, 165, 248, 0.2);
   }
-
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
   .related-books-btn {
     position: absolute;
     bottom: 10px;
