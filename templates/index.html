@@ -28,9 +28,9 @@
         <button class="scroll-btn scroll-left">←</button>
         {% for rb in random_books %}
         <div class="book-card" data-book-id="{{rb[0]}}">
-          <img src="https://via.placeholder.com/200x300.png?text={{rb[0]}}" alt="{{rb[0]}}">
+          <img src="https://placehold.co/200x300/png?text={{rb[0]}}" alt="{{rb[0]}}">
             <div class="book-details">
-              <h3 class="truncate">{{rb[0]}}</h3>
+              <h3 class="truncate text-justify">{{rb[0]}}</h3>
               <p>{{rb[1]}}</p>
             </div>
           <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
