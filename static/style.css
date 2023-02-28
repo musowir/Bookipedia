@@ -168,16 +168,7 @@ h2 {
   .dark-theme .book-card:hover {
     box-shadow: 5px 5px 10px rgba(124, 165, 248, 0.2);
   }
-  /* .related-books-btn {
-    
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 12px;
-    
-  } */
+
   .related-books-btn {
     position: absolute;
     bottom: 10px;
