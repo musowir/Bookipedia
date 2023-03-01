@@ -1,77 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bookipedia</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../static/style.css">
-    <script src="../static/script.js"></script>
-  </head>
-  <body>
-    <main>
+<head>
+  <title>Bookipedia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../static/style.css" />
+  <script src="../static/script.js"></script>
+</head>
+
+<body>
+  <main>
     <header>
-    <h1 class="header-title">Bookipedia</h1>
-    <button class="header-btn" id="toggle-theme">Toggle Theme</button>
-</header>
-<script>
-  const toggleThemeBtn = document.querySelector('#toggle-theme');
-  const body = document.querySelector('body');
+      <h1 class="header-title">Bookipedia</h1>
+      <button class="header-btn" id="toggle-theme">Toggle Theme</button>
+    </header>
+    <script>
+      const toggleThemeBtn = document.querySelector("#toggle-theme");
+      const body = document.querySelector("body");
 
-  toggleThemeBtn.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-  });
-</script>
+      toggleThemeBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+      });
+    </script>
 
-<h2 class="genre-title">Science Fiction</h2>
+    <h2 class="genre-title">Science Fiction</h2>
     <div class="book-list-wrapper">
-        <button class="scroll-btn scroll-left">←</button>
-        {% for rb in random_books %}
-        <div class="book-card" data-book-id="{{rb[0]}}">
-          <img src="https://placehold.co/200x300/png?text={{rb[0]}}" alt="{{rb[0]}}">
-            <div class="book-details">
-              <h3 class="truncate text-justify">{{rb[0]}}</h3>
-              <p>{{rb[1]}}</p>
-            </div>
-          <button class="related-books-btn"><i class="bi bi-box-seam-fill"></i></button>
+      <button class="scroll-btn scroll-left">←</button>
+      {% for rb in random_books %}
+      <div class="book-card" data-book-id="{{rb[0]}}">
+        <img src="https://placehold.co/200x300/png?text={{rb[0]}}" alt="{{rb[0]}}" />
+        <div class="book-details">
+          <h3 class="truncate text-justify">{{rb[0]}}</h3>
+          <p>{{rb[1]}}</p>
         </div>
-        {% endfor %}
-        
-        <button class="scroll-btn scroll-right">→</button>
-</div>
-<div id="related-books-container" class="related-books-container" style="display: none;">
-  <h2>Related Books</h2>
-<div  class="book-list-wrapper">
-  <div class="related-book-card book-card">
-    <img src="https://via.placeholder.com/200x300.png?text=Related+Book+1" alt="Related Book 1">
-    <div class="related-book-details book-details">
-      <h3>Related Book 1</h3>
-      <p>Author: Jane Doe</p>
-      <p>Price: $9.99</p>
+        <button class="related-books-btn">
+          <i class="bi bi-box-seam-fill"></i>
+        </button>
+      </div>
+      {% endfor %}
+
+      <button class="scroll-btn scroll-right">→</button>
     </div>
-  </div>
-  <div class="related-book-card book-card">
-    <img src="https://via.placeholder.com/200x300.png?text=Related+Book+1" alt="Related Book 1">
-    <div class="related-book-details book-details">
-      <h3>Related Book 1</h3>
-      <p>Author: Jane Doe</p>
-      <p>Price: $9.99</p>
+    <div id="related-books-container" class="related-books-container" style="display: none">
+      <h2>Related Books</h2>
+      <div class="book-list-wrapper">
+        <div class="related-book-card book-card">
+          <img src="https://via.placeholder.com/200x300.png?text=Related+Book+1" alt="Related Book 1" />
+          <div class="related-book-details book-details">
+            <h3>Related Book 1</h3>
+            <p>Author: Jane Doe</p>
+            <p>Price: $9.99</p>
+          </div>
+        </div>
+        <div class="related-book-card book-card">
+          <img src="https://via.placeholder.com/200x300.png?text=Related+Book+1" alt="Related Book 1" />
+          <div class="related-book-details book-details">
+            <h3>Related Book 1</h3>
+            <p>Author: Jane Doe</p>
+            <p>Price: $9.99</p>
+          </div>
+        </div>
+        <div class="related-book-card book-card">
+          <img src="https://via.placeholder.com/200x300.png?text=Related+Book+1" alt="Related Book 1" />
+          <div class="related-book-details book-details">
+            <h3>Related Book 1</h3>
+            <p>Author: Jane Doe</p>
+            <p>Price: $9.99</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="related-book-card book-card">
-    <img src="https://via.placeholder.com/200x300.png?text=Related+Book+1" alt="Related Book 1">
-    <div class="related-book-details book-details">
-      <h3>Related Book 1</h3>
-      <p>Author: Jane Doe</p>
-      <p>Price: $9.99</p>
-    </div>
-  </div>
-</div>
-</div>
-</main>
-<footer>
+  </main>
+  <footer>
     <div class="container">
       <p>&copy; 2023 Bookipedia. All rights reserved.</p>
     </div>
   </footer>
-  
+</body>
+
+</html>
